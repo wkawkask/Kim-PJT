@@ -1,8 +1,8 @@
 const express = require("express");
 const app   = express();
-const api   = require('./routes/index');
+const root   = require('./routes/index');
 
-app.use('/api',api);
+app.use('/',root);
 
 app.listen(3001,() => console.log("node server running"));
 
