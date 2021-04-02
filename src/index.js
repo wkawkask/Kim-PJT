@@ -1,29 +1,32 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-//sample.js
-import Sample from 'views/sample';
-
-
-
-
-
+import Home from "views/Home.js";
+import Project from "views/Project.js";
 
 ReactDOM.render(
-
   <BrowserRouter>
     <Switch>
+      <Route 
+        path="/" 
+        exact 
+        render={props => <Home {...props} />} 
+      />
+      <Route 
+        path="/home" 
+        exact 
+        render={props => <Home {...props} />} 
+      />
       <Route
-        path="/"
+        path="/project"
         exact
-        render={props => <Sample {...props} /> }
+        render={props => <Project {...props} />}
       />
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
-
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
