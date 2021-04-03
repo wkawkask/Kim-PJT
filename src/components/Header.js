@@ -18,6 +18,8 @@ class Header extends React.Component {
               <Col className="d-none d-lg-flex justify-content-start">
                 <Nav className="mrx-auto" navbar>
 
+                {/* 메뉴를 db에서 가져오도록 짜보자 */}
+
                   <NavItem className="d-flex align-items-center">
                     <NavLink className="font-weight-bold" href="/home">This Page..</NavLink>
                   </NavItem>
